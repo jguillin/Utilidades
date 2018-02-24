@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{background-image:url('sant.jpg'); background-size: cover; background-repeat: no-repeat; background-color: dimgrey; background-attachment: fixed; background-position: center center;}
+	</style>
+</head>
+<body>
+
+  <img class="mySlides" src="sant.jpg" style="width:100%">
+  <img class="mySlides" src="sant3.jpg" style="width:100%">
+  <img class="mySlides" src="sant4.jpg" style="width:100%">
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000); // Cambia imagen cada 3 segundos
+}
+</script>
+
+
+</body>
+</html>
